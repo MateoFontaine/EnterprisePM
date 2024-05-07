@@ -1,10 +1,129 @@
 ---
-
+import Logo from '../components/Logo.astro'
 ---
 <div class="container">
+    <header class="header">
+        <nav class="navbar">
+            <Logo  />
+            <label class="labe_hamburguesa" for="menu_hamburguesa">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="35"
+                    height="40"
+                    fill="#00316B"
+                    class="list_icon"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                    />
+                </svg>
+            </label>
 
+            <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+
+            <ul class="ul_links">
+                <li class="li_links">
+                    <a href="#" class="link">Property Managment</a>
+                </li>
+                <li>
+                    <div class="linea"></div>
+                </li>
+                <li class="li_links">
+                    <a href="#" class="link">Complementary Service</a>
+                </li>
+                <li>
+                    <div class="linea"></div>
+                </li>
+                <li class="li_links">
+                    <a href="#" class="link">Location</a>
+                </li>
+                <li>
+                    <div class="linea"></div>
+                </li>
+                <li class="li_links">
+                    <a href="#" class="link">About Us</a>
+                </li>
+                <li>
+                    <div class="linea"></div>
+                </li>
+                <li class="li_links">
+                    <a href="#" class="link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 </div>
-
-<style>
     
+<style>
+    :root {
+    --color_primario: #00316B;
+    --color_blanco: #fff;
+    --altura_header: 100px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+    }
+    a{
+        text-decoration: none;
+    }
+    ol,ul{
+        list-style: none;
+    }
+    @media (max-width: 768px){
+    .header {
+        height: var(--altura_header);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .navbar {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0rem 1rem 0rem .5rem;
+    }
+    .menu_hamburguesa{
+        display: none;
+    }
+    .menu_hamburguesa:checked + .ul_links {
+        height: 300px;
+    }
+    .list_icon {
+        color: var(--color_blanco);
+        cursor: pointer;
+    }
+    .ul_links {
+        width: 100%;
+        background-color: rgba(85, 85, 85, 0.192);
+        position: absolute;
+        top: var(--altura_header);
+        left: 0;
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        transition: all .3s;
+        padding: 0rem 2rem;
+    }
+    li{
+        margin-top: 1rem;
+    }
+    .link {
+        font-size: 1em;
+        color: var(--color_blanco);
+        font-weight: bold;
+    }
+    .linea{
+        width: 90vw;
+        height: 3px;
+        background-color: white;
+        margin-right: 3rem;
+    }
+    }
 </style>
