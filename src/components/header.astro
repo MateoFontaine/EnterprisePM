@@ -1,5 +1,7 @@
 ---
 import Logo from '../components/Logo.astro'
+import Flecha from '../img/flechita.png'
+import FlechaDer from '../img/flechitaDer.png'
 ---
 <div class="container">
     <header class="header">
@@ -25,31 +27,36 @@ import Logo from '../components/Logo.astro'
 
             <ul class="ul_links">
                 <li class="li_links">
-                    <a href="#" class="link">Property Managment</a>
+                    <a href="#" class="link">Property Managment</a>     
+                    <img class="flecha" src={Flecha.src} alt="">      
                 </li>
                 <li>
                     <div class="linea"></div>
                 </li>
                 <li class="li_links">
                     <a href="#" class="link">Complementary Service</a>
+                    <img class="flecha" src={Flecha.src} alt="">      
                 </li>
                 <li>
                     <div class="linea"></div>
                 </li>
                 <li class="li_links">
                     <a href="#" class="link">Location</a>
+                    <img class="flecha" src={FlechaDer.src} alt="">
                 </li>
                 <li>
                     <div class="linea"></div>
                 </li>
                 <li class="li_links">
                     <a href="#" class="link">About Us</a>
+                    <img class="flecha" src={FlechaDer.src} alt="">
                 </li>
                 <li>
                     <div class="linea"></div>
                 </li>
                 <li class="li_links">
                     <a href="#" class="link">Contact</a>
+                    <img class="flecha" src={FlechaDer.src} alt="">
                 </li>
             </ul>
         </nav>
@@ -85,14 +92,13 @@ import Logo from '../components/Logo.astro'
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        border: 1px solid red;
         padding: 0rem 1rem;
     }
     .menu_hamburguesa{
         display: none;
     }
     .menu_hamburguesa:checked + .ul_links {
-        height: 300px;
+        height: 330px;
     }
     .list_icon {
         color: var(--color_blanco);
@@ -126,5 +132,15 @@ import Logo from '../components/Logo.astro'
         background-color: white;
         margin-right: 3rem;
     }
+    .li_links{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .flecha{
+        width: 2rem;
+    }
+
+    
     }
 </style>
