@@ -70,7 +70,8 @@ import Logo from '../components/Logo.astro'
     ol,ul{
         list-style: none;
     }
-    @media (max-width: 768px){
+    
+    @media (max-width: 639px){
     .header {
         height: var(--altura_header);
         display: flex;
@@ -84,7 +85,8 @@ import Logo from '../components/Logo.astro'
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 0rem 1rem 0rem .5rem;
+        border: 1px solid red;
+        padding: 0rem 1rem;
     }
     .menu_hamburguesa{
         display: none;
@@ -107,7 +109,6 @@ import Logo from '../components/Logo.astro'
         display: flex;
         flex-direction: column;
         justify-content: start;
-        align-items: flex-start;
         transition: all .3s;
         padding: 0rem 2rem;
     }
@@ -120,7 +121,7 @@ import Logo from '../components/Logo.astro'
         font-weight: bold;
     }
     .linea{
-        width: 90vw;
+        width: 100%;
         height: 3px;
         background-color: white;
         margin-right: 3rem;
