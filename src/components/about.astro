@@ -1,0 +1,36 @@
+---
+import Imagen from '../img/fondo.jpeg'
+---
+
+<div class="container">
+    <h2>About</h2>
+    <div class="linea"></div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quisquam numquam eveniet hic qui dolore iusto alias! Atque modi nulla eaque corporis fugiat nihil, animi, commodi harum autem voluptatibus voluptas.</p>
+    <img src={Imagen.src} alt="Imagen de una ciudad">
+</div>
+
+
+<style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 2rem;
+        color: white;
+        background-color: #00316B;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .linea{
+        width: 90px;
+        height: 2px;
+        background-color: rgb(251, 255, 31);
+        margin: 1rem 0rem;
+    }
+    p{
+        text-align: start;
+        margin-bottom: 1rem;
+    }
+</style>
