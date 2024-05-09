@@ -25,38 +25,62 @@ import FlechaDer from '../img/flechitaDer.png'
 
             <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
 
-            <ul class="ul_links">
-                <li class="li_links">
-                    <a href="#" class="link">Property Managment</a>     
-                    <img class="flecha" src={Flecha.src} alt="">      
+            <ul class="ul_links" id="menu">
+                <li class="li_links_more" id="item">
+                    <div class="box">
+                        <a href="#" class="link">Property Managment</a>     
+                        <a href="#"><img class="flecha" src={Flecha.src} alt=""></a>
+                    </div>
+                    <ul class="ul_links_more" id="desple">
+                        <li class="nav_links" id="item">
+                            <a href="#" class="link">Complementary Service</a>
+                            <a href="#"><img class="flecha" src={FlechaDer.src} alt=""></a>     
+                        </li>
+                        <li class="nav_links" id="item">
+                            <a href="#" class="link">Complementary Service</a>
+                            <a href="#"><img class="flecha" src={FlechaDer.src} alt=""></a>     
+                        </li>
+                    </ul>
                 </li>
-                <li>
+                <li id="item">
                     <div class="linea"></div>
                 </li>
-                <li class="li_links">
-                    <a href="#" class="link">Complementary Service</a>
-                    <img class="flecha" src={Flecha.src} alt="">      
+                <li class="li_links_more" id="item">
+                    <div class="box">
+                        <a href="#" class="link">Conplementary Service</a>     
+                        <a href="#"><img class="flecha" src={Flecha.src} alt=""></a>
+                    </div>
+                    <ul class="ul_links_more" id="desple">
+                        <li class="nav_links" id="item">
+                            <a href="#" class="link">Complementary Service</a>
+                            <a href="#"><img class="flecha" src={FlechaDer.src} alt=""></a>     
+                        </li>
+                        <li class="nav_links" id="item">
+                            <a href="#" class="link">Complementary Service</a>
+                            <a href="#"><img class="flecha" src={FlechaDer.src} alt=""></a>     
+                        </li>
+                    </ul>
                 </li>
-                <li>
+                <li id="item">
                     <div class="linea"></div>
                 </li>
-                <li class="li_links">
+                <li class="li_links" id="item">
                     <a href="#" class="link">Location</a>
-                    <img class="flecha" src={FlechaDer.src} alt="">
+                    <a href="#"><img class="flecha" src={FlechaDer.src} alt=""></a>
                 </li>
-                <li>
+                <li id="item">
                     <div class="linea"></div>
                 </li>
-                <li class="li_links">
+                <li class="li_links" id="item">
                     <a href="#" class="link">About Us</a>
-                    <img class="flecha" src={FlechaDer.src} alt="">
+                    <a href="#"><img class="flecha" src={FlechaDer.src} alt=""></a>
                 </li>
-                <li>
+                <li id="item">
                     <div class="linea"></div>
                 </li>
-                <li class="li_links">
+                <li class="li_links" id="item">
                     <a href="#" class="link">Contact</a>
-                    <img class="flecha" src={FlechaDer.src} alt="">
+                    <a href="#"><img class="flecha" src={FlechaDer.src} alt=""></a>
                 </li>
             </ul>
         </nav>
@@ -98,7 +122,8 @@ import FlechaDer from '../img/flechitaDer.png'
         display: none;
     }
     .menu_hamburguesa:checked + .ul_links {
-        height: 330px;
+        height: auto;
+        padding-bottom: 1rem
     }
     .list_icon {
         color: var(--color_blanco);
@@ -137,9 +162,38 @@ import FlechaDer from '../img/flechitaDer.png'
         justify-content: space-between;
         align-items: center;
     }
+    .li_links_more{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+    }
+    .box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .ul_links_more{
+        width: 100%;
+    }
+    .nav_links{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 1rem;
+    }
     .flecha{
         width: 2rem;
     }
+    #desple{
+        display: none;
+    }
+    #menu #item:hover #desple{
+        display: block;
+    }
+    
 
     
     }
